@@ -1,0 +1,17 @@
+{
+  "name": "unplugin-vue-components-monorepo-issue",
+  "private": true,
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@vue/tsconfig": "^0.4.0",
+    "prettier": "^3.0.2",
+    "typescript": "^5.1.6"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

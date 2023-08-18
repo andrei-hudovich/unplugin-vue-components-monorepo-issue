@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "env.d.ts",
+    "src/**/*",
+    // Fix Volar issue with not loading the types for package components on the fly
+    // Issue - https://github.com/vuejs/language-tools/issues/3415
+    // Workaround - https://github.com/vuejs/language-tools/issues/3415#issuecomment-1650622375
+    "../../packages/shared/src/**/*.vue"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared/*": ["../../packages/shared/src/*"]
+    }
+  }
+}
